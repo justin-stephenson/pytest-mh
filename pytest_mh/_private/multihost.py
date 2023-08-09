@@ -348,6 +348,8 @@ class MultihostHost(Generic[DomainType]):
 
         # Connect to SSH unless lazy ssh is set
         if not self.domain.config.lazy_ssh:
+            print("SSH")
+            return
             self.ssh.connect()
 
     @property
