@@ -132,7 +132,7 @@ class MultihostFixture(object):
         roles: list[MultihostRole] = [x for x in self._paths.values() if isinstance(x, MultihostRole)]
         hosts: list[MultihostHost] = [x.host for x in roles]
 
-        return list(set([*hosts, *roles]))
+        return list([*hosts, *roles])
 
     def _setup(self) -> None:
         """
