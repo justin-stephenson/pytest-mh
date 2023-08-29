@@ -165,6 +165,7 @@ class MultihostFixture(object):
         try:
             errors = []
             for item in reversed(self._hosts_and_roles):
+                mh_log_phase(self.logger, self.request, f"teardown of item: {item}")
                 try:
                     # Try to collect artifacts from host before the role is teared down.
                     # We need to do it before the role object is teardown as it may
